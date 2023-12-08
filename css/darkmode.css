@@ -1,0 +1,17 @@
+body{
+    background: var(#000);
+    color: var(#fff);
+}
+
+button{
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.dark-mode{
+    background: #000;
+    color: #fff;
+}
+.espaco {
+    padding-left: 250px;
+  }

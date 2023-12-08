@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/start/jquery-ui.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+          <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+          <link href="css/bootstrap.min.css" rel="stylesheet">
+             <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+             <link href="css/darkmode.css" rel="stylesheet">
+             <script src="js/jquery.js"></script>
+             
+	<title>Misturas</title>
+ <script>
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = "blind"
+       $( "#button" ).hide();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 280, height: 185 } };
+      }
+
+function callback() {
+      setTimeout(function() {
+        $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+      }, 2147483647 );
+    };
+ 
+      // Run the effect
+      $( "#effect,#effect2" ).show( selectedEffect, options, 500, callback );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+    });
+ $( "#effect,#effect2" ).hide();
+  } );
+  </script>
+</head>
+<body>
+<br>
+ <div class="float-left">
+<a class="btn btn-primary  btn-lg" href="index.html" role="button">Voltar para a tela inicial</a>
+</div>
+<div class="float-right">
+  <button id="mybtn" class="btn btn-success" onclick="darkmode()">Tema Escuro</button>
+</div>
+<br><br>
+<center>
+<h1 class="display-3 text-success">Misturas</h1>
+<br>
+<h3>Mistura é a junção de duas ou mais substâncias, sejam elas simples, sejam compostas, sem que ocorra uma transformação química desses compostos. As propriedades físicas das misturas, como densidade e temperatura de fusão e de ebulição, serão diferentes das substâncias puras envolvidas nesse sistema.
+As misturas diferenciam-se, principalmente, pelos seus aspectos físicos, como o aspecto visual e temperaturas de ebulição e fusão, que podem ser fixas ou variáveis. 
+</h3>
+<br>
+<img src="imagens/5.png" class="img-fluid">
+</div>
+<br><br>
+<H3>Clique no botao abaixo para ver os tipos de misturas</h3>
+<br>
+<div class="toggler float-left col-6">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Misturas Homogêneas</h3>
+    <p>
+     As misturas homogêneas são misturas que apresentam apenas uma fase, ou seja, não é possível distinguir os componentes que as constituem.
+Elas apresentam-se de forma uniforme, em apenas uma fase (monofásica).
+    </p>
+<img src="imagens/5,3.jpg" class="img-fluid" width="257" height="343">
+<h6>Um exemplo disso é uma massa de bolo onde todos os ingredientes se juntam e formam uma única solução</h6>
+  </div>
+</div>
+   <div class="toggler float-right col-6">
+     <div id="effect2" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Misturas Heterogêneas</h3>
+    <p>
+      Nas misturas heterogêneas observa-se a presença de duas ou mais substâncias numa mistura. Apresenta duas ou mais fases (polifásica). Vale lembrar que não existem misturas heterogêneas gasosas.
+    </p>
+<img src="imagens/5,2.png" class="img-fluid">
+<h6>Um exemplo disso é a mistura de água com óleo, onde as substâncias não se misturam e fica uma distinção clara entre elas. </h6>
+  </div>
+</div>
+<button id="button" class="ui-state-default ui-corner-all">Clique aqui</button>
+</center>
+<br><br><br><br><br>
+
+<script type="text/javascript">
+    $("#accordion").accordion();
+  </script>		
+<!-- jQuery, Popper.js, Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="js/base.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
